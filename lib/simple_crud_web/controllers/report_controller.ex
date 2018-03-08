@@ -2,7 +2,7 @@ defmodule SimpleCrudWeb.ReportController do
   use SimpleCrudWeb, :controller
   alias SimpleCrud.{Repo, Exam}
 
-  def index(conn, params) do
+  def monthly_report(conn, params) do
     start_date = get_datetime(params["start_date"])
     end_date = get_datetime(params["end_date"], true)
     employee_id = params["employee_id"]
