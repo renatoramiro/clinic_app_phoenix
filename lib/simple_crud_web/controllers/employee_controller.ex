@@ -6,11 +6,12 @@ defmodule SimpleCrudWeb.EmployeeController do
   plug :scrub_params, "employee" when action in [:create, :update]
 
   def index(conn, params) do
-    param_enabled = check_enabled(String.downcase(params["enabled"]))
+    param_enabled = check_enabled(params["enabled"])
     query = from e in Employee,
       where: e.enabled == ^param_enabled,
       select: e
-    employees = Repo.all(query)
+    # employees = Repo.all(query)
+    employees = Repo.all(Employee)
     render(conn, "index.json", employees: employees)
   end
 

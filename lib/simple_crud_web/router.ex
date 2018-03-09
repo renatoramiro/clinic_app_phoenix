@@ -8,7 +8,7 @@ defmodule SimpleCrudWeb.Router do
   scope "/api", SimpleCrudWeb do
     pipe_through :api
 
-    resources("/employees", EmployeeController, only: [:index, :show, :create, :update, :delete])
+    resources("/employees", EmployeeController)
     resources("/exam_types", ExamTypeController)
     resources("/clients", ClientController)
     resources("/exams", ExamController)

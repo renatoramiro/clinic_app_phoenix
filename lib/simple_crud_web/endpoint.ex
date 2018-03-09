@@ -36,6 +36,8 @@ defmodule SimpleCrudWeb.Endpoint do
     key: "_simple_crud_key",
     signing_salt: "0daKxUli"
 
+  plug CORSPlug
+
   plug SimpleCrudWeb.Router
 
   @doc """

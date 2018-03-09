@@ -14,7 +14,8 @@ defmodule SimpleCrudWeb.ClientView do
       id: client.id,
       name: client.name,
       medical_agreement: client.medical_agreement,
-      cpf: client.cpf
+      cpf: client.cpf,
+      address: client.address
     }
   end
 end
